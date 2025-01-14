@@ -1,0 +1,50 @@
+.reviews {
+    .swiper-slide {
+        height: 100%;
+    }
+
+
+}
+
+@keyframes aa {
+    from {
+        background-size: 100% auto;
+    } to {
+        background-size: 200% auto;
+    }
+}
+
+.review {
+
+    padding: 1.5em;
+    height: 100%;
+    border: 1px solid currentColor;
+
+    .swiper-slide-active & {
+        animation: aa 1000ms 400ms forwards;
+    }
+    &__rating {
+        margin-bottom: 1.5rem;
+    }
+    &__text {
+        margin-bottom: 2rem;
+    }
+    &__name {
+        font-weight: 700;
+        text-align: right;
+        font-style: italic;
+        &::before {
+            content: "”";
+            font-size: 1.5rem;
+            font-family: 'Georgia', serif;
+        }
+    }
+
+    
+}
+
+.rating {
+    &__star {
+        color: #fbc321;
+    }
+}

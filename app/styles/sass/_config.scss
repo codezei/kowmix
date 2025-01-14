@@ -1,0 +1,46 @@
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
+// USER VARIABLES SECTION
+
+$accent: orange;
+$fontsize: 16px;
+$textcolor: #333;
+$lineheight: 1.65;
+$userfont: 'Open Sans', sans-serif;
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+
+// IMPORT SECTION
+
+
+
+
+::placeholder {
+	color: #666
+}
+	
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+	
+
+input, textarea {
+	outline: none;
+	&:focus:required:invalid {
+		border-color: red;
+	}
+		
+	&:required:valid {
+		border-color: green
+	}
+		
+}
+	
+
+
+

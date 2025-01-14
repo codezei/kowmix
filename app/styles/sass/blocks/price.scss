@@ -1,0 +1,42 @@
+.price {
+
+    &-table {
+        &__title {
+            margin: 0;
+            padding: 0.75rem;
+            background-color: $secondary;
+            color: #ffff;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        &__row {
+            --bs-gutter-y: 0;
+            --bs-gutter-x: 1rem;
+            // background-color: $secondary;
+        }
+        &__col {
+
+        }
+    }
+    &-item {
+        border-top: 1px solid rgba($color: $secondary, $alpha: 0.3);
+        padding: 0.75rem;
+        transition: all 400ms;
+        height: 100%;
+        &:hover {
+            background-color: $secondary;
+            color: #fff;
+        }
+        &__name {
+            // color: #000;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            
+        }
+        &__value {
+            color: $fourth;
+        }
+    }
+
+}
+

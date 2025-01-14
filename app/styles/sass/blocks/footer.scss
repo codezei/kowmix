@@ -1,0 +1,26 @@
+.footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 4px solid $fourth;
+    background: $primary;
+    color: #fff;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+    &__logo {
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+    &__copyright {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+    @media screen and (min-width:1024px) {
+        &__inner {
+            align-items: center;
+        }
+    }
+}

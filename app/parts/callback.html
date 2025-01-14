@@ -1,0 +1,51 @@
+<div class="callback">
+    <div class="callback__inner"> 
+        <button class="callback__close" type="button"> <svg class="bi bi-x-lg"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z">
+                </path>
+            </svg></button>
+        <div class="callback__form">
+            <h3 class="callback__title">Formularz kontaktowy</h3>
+            <form class="callback-form">
+                <div class="callback-form__row">
+                    <label class="callback-form__label" for="name">Imię</label>
+                    <input class="callback-form__input" type="text" placeholder="Twoje imię" required="required" name="name" autocomplete="name" id="name" />
+    
+                </div>
+                <div class="callback-form__row">
+                    <label class="callback-form__label" for="phone">Numer telefonu</label>
+                    <input class="callback-form__input" type="tel" placeholder="Twój numer telefonu" required="required" name="phone" autocomplete="tel" id="phone" />
+    
+                </div>
+                
+                <div class="callback-form__row">
+                    <div class="callback-form__label">Jakie usługi?</div>
+                    <label>
+                        <input type="checkbox" name="work" value="Pranie tapicerki meblowej">
+                        Pranie tapicerki meblowej
+                    </label>
+                    <label>
+                        <input type="checkbox" name="work" value="Materacy">
+                        Materacy
+                    </label>
+                    <label>
+                        <input type="checkbox" name="work" value="Czyszczenie dywanów">
+                        Czyszczenie dywanów
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="work" value="Czyszczenie w samochodzie">
+                        Czyszczenie w samochodzie
+                    </label>
+                </div>
+                <textarea name="message" cols="4" placeholder="Wiadomość" class="callback-form__input"></textarea>
+                <button class="btn callback-form__btn" type="submit">Wysłać</button>
+            </form>
+        </div>
+        <div class="callback__answer">
+
+        </div>
+    </div>
+</div>
