@@ -1,21 +1,8 @@
 .promo {
-    // padding: 120px 0;
-    position: relative;
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 50%;
-        height: 100%;
-        right: 0;
-        top: 0;
-        background: linear-gradient(to left, transparent, #fff), url(../images/dist/promo.webp);
-        background-size: cover;
-        background-position: right bottom;
-        background-repeat: no-repeat;
-
-        z-index: -1;
-        pointer-events: none;
+    &__container {
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     &__title {
         position: relative;
@@ -35,35 +22,100 @@
         }
     }
 
-    &__subtitle {
-        margin-bottom: 2.5rem;
-        // font-family: "Playwrite CU", cursive;
-    }
 
     &__advantages {
+        margin-top: 1rem;
         margin-bottom: 2rem;
-        max-width: 400px;
+        
     }
-    @media screen and (max-width: 1399px) {
-        &:after {
-            width: 70%;
+
+    &__btn {
+        text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+        &__advantages {
+            max-width: 320px;
         }
-    }
-    @media screen and (max-width: 767px) {
         &__btn {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            text-align: left;
         }
     }
-    @media screen and (max-width: 991px) {
-        &:after {
-            width: 100%;
-            background: linear-gradient(to left, rgba($color: #fff, $alpha: 0) 0%, rgba($color: #fff, $alpha: 1) 70%), url(../images/dist/promo.webp);
-            background-size: cover;
-            background-position: bottom center;
-            background-repeat: no-repeat;
-            opacity: 0.5;
+
+    @media screen and (min-width: 1024px) {
+
+        &__advantages {
+            max-width: 400px;
+            margin: 3rem 0;
         }
     }
+
+    @media screen and (min-width: 1220px) {
+        &__container {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+}
+
+
+.carpet {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background:  linear-gradient(to right, #fff 0%, rgba($color: $third, $alpha: 0.1) 30%, rgba($color: $third, $alpha: 0.1) 90%, #fff 100%), url(../images/dist/icons.png);
+    background-position: center;
+    overflow: hidden;
+    display: flex;  
+    align-items: center;
+    padding: 30px 0;
+    &__row {
+        height: 100px;
+        display: flex;
+        width: 100%;
+    }
+    &__brush {
+        height: 100%;
+        position: relative;
+        z-index: -1;
+    }
+    &__text {
+        background: rgba($color: #fff, $alpha: 0.5);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        padding: 1rem;
+        flex-grow: 1;
+    }
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        left: 320px;
+        right: 0;
+        top: 0;
+        width: auto;
+        &__text {
+            text-align: center;
+        }
+
+    }
+    @media screen and (min-width: 1024px) {
+        left: 400;
+        &__text {
+            font-size: 1em;
+        }
+    }
+    @media screen and (min-width: 1220px) {
+        left: 450px;
+        &__text {
+            font-size: 1.5rem;
+            
+        }
+        &__row {
+            height: 200px;
+        }
+    }
+
 }

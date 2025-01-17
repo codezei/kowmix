@@ -1,0 +1,74 @@
+<div class="popup" data-type="form">
+    <div class="popup__inner"> 
+        <button class="popup__close" type="button"> <svg class="bi bi-x-lg"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z">
+                </path>
+            </svg></button>
+            <h3 class="text-center">Formularz kontaktowy</h3>
+            <form action="/telegram.php" class="form js-form">
+                <div class="row">
+                    <div class="col-6">
+                        <input class="input" type="text" placeholder="Twoje imię" required="required" name="name" autocomplete="name" id="name" />
+                    </div>
+                    <div class="col-6">
+                        <input class="input" type="tel" placeholder="Twój numer telefonu" required="required" name="phone" autocomplete="tel" id="phone" />
+                    </div>
+                    <div class="col-12">
+                        <input class="input" type="text" placeholder="Miasto/miasteczko" required="required" name="city" autocomplete="city" id="city" />
+                    </div>
+                    <div class="col-12">
+                        <h6>Rodzaj pracy
+                        </h6>
+                        <label>
+                            <input type="checkbox" name="work" value="Pranie tapicerki meblowej">
+                            Pranie tapicerki meblowej
+                        </label>
+                        <label>
+                            <input type="checkbox" name="work" value="Materacy">
+                            Materacy
+                        </label>
+                        <label>
+                            <input type="checkbox" name="work" value="Czyszczenie dywanów">
+                            Czyszczenie dywanów
+                        </label>
+                        <label>
+                            <input type="checkbox" name="work" value="Czyszczenie w samochodzie">
+                            Czyszczenie w samochodzie
+                        </label>
+                    </div>
+                    <div class="col-12">
+                        <textarea name="message" cols="4" placeholder="Wiadomość" class="input"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn popup-form__btn" type="submit">Wysłać</button>
+                    </div>
+                </div>
+            </form>
+
+    </div>
+</div>
+
+<div class="popup" data-type="success">
+    <div class="popup__inner"> 
+        <button class="popup__close" type="button"> <svg class="bi bi-x-lg"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z">
+                </path>
+            </svg></button>
+            <h3>Success</h3>
+    </div>
+</div>
+<div class="popup" data-type="error">
+    <div class="popup__inner"> 
+        <button class="popup__close" type="button"> <svg class="bi bi-x-lg"
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z">
+                </path>
+            </svg></button>
+            <h3>Error</h3>
+    </div>
+</div>

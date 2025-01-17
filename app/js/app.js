@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleMenu();
   reviews();
   works();
-  // callback();
+  popup();
 });
 
 function appendIframe () {
@@ -138,33 +138,42 @@ function hoverProcessItems() {
     });
   }
 }
-function callback() {
-  let callback = document.querySelector(".callback");
-  let callbackForm = document.querySelector(".callback__form");
-  let callbackAnswer = document.querySelector(".callback__answer");
-  let form = document.querySelector(".callback-form");
+function popup() {
+  let popupForm = document.querySelector(".popup[data-type='form']");
+  let popupSuccess = document.querySelector(".popup[data-type='success']");
+  let popupError = document.querySelector(".popup[data-type='error']");
+  let form = document.querySelector('.js-form')
 
-  function openCallback() {
-    let buttons = document.querySelectorAll(".js-open-callback");
+  let buttons = document.querySelectorAll(".js-open-popup");
+  let activePopup
     
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener("click", function () {
-        callbackForm.classList.add('active')
-        callbackAnswer.classList.remove('active')
-        callbackAnswer.innerHTML = ''
-        callback.classList.add("active");
-      });
-    }
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+      popupForm.classList.add('active')
+      activePopup = popupForm
+    });
   }
 
-  openCallback();
-  closeCallback();
-  function closeCallback () {
-    callback.addEventListener('click', function (e) {
-      if (e.target === e.currentTarget || e.target.classList.contains('callback__close')) {
-        callback.classList.remove("active");
-      }
-    })
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('popup') || e.target.classList.contains('popup__close')) {
+      activePopup.classList.remove("active");
+    }
+  })
+
+
+  function togglePopup (type) {
+    activePopup.classList.remove('active')
+    if (type === 'success') {
+      popupSuccess.classList.add('active')
+      activePopup = popupSuccess
+    } else if (type === 'error') {
+      popupError.classList.add('active')
+      activePopup = popupError
+    }
+
+    setTimeout(function () {
+      activePopup.classList.remove("active");
+    }, 3000)
   }
 
 
@@ -187,13 +196,9 @@ function callback() {
           body: formData
         })
         let answer = await response.json()
-        callbackAnswer.innerHTML = answer.message
-        callbackForm.classList.remove('active')
-        callbackAnswer.classList.add('active')
-        setTimeout(function () {
-          callback.classList.remove("active");
-        }, 3000)
+        togglePopup(answer.status)
       } catch (e) {
+        togglePopup('error')
         console.log(e.message)
       }
 
@@ -205,12 +210,12 @@ function callback() {
 }
 
 
-window.addEventListener('load', function () {
-  hideLoader();
-})
+// window.addEventListener('load', function () {
+//   hideLoader();
+// })
 
-function hideLoader() {
-  let loader = document.querySelector(".loader-wrap");
-  loader.style.display = "none";
-  document.body.classList.add("animate");
-}
+// function hideLoader() {
+//   let loader = document.querySelector(".loader-wrap");
+//   loader.style.display = "none";
+//   document.body.classList.add("animate");
+// }

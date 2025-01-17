@@ -120,7 +120,7 @@
             bottom: 0;
             width: 0;
             height: 2px;
-            background: $green;
+            background: $secondary;
             transition: all 400ms;
             transform: translateX(-50%);
         }
@@ -158,7 +158,7 @@
         }
         
         &:hover {
-            color: $green;
+            color: $secondary;
         }
     }
     &__nav {
@@ -173,7 +173,7 @@
             text-decoration: none;
             display: inline-block;
             &:hover {
-                color: $green;
+                color: $secondary;
             }
         }
     }

@@ -1,78 +1,31 @@
 .services {
-    &-swiper {
 
-    }
-    &-thumbnail-swiper {
-        height: 100%;
-        .swiper-wrapper {
-            display: grid;
-            gap: 1rem;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-        }
-        .swiper-slide {
-            width: auto !important;
-        }
-    }
     
 }
 
 .service {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
     border: 1px solid currentColor;
-    position: relative;
-    z-index: 1;
-
-    &__media {
-        width: 300px;
-        height: 300px;
-        flex-shrink: 0;
-        background: linear-gradient(to right, #fff 0%, transparent 50%), linear-gradient(to bottom, #fff 0%, transparent 30%);
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: relative;
-            z-index: -1;
-        }
-    }
-    &__description {
-        padding: 1rem;
-        flex-grow: 1;
-    }
-    &__info {
-        padding: 1rem;
-    }
-    &__body {
-        display: flex;
-    }
-
-    @media screen and (max-width: 767px) {
-        &__media {
-            width: 200px;
-            height: 200px;
-        }
-    }
-    @media screen and (max-width: 575px) {
-        &__body {
-            flex-direction: column;
-        }
-        &__media {
-            width: 100%;
-        }
-    }
-}
-
-.service-thumbnail {
+    height: 100%;
     padding: 1rem;
-    border: 1px solid currentColor;
-    height: 100%;
-    .swiper-slide-thumb-active & {
-        background: $third;
-        // color: $third;
-        // border: 1px solid $fourth;
+    &__header {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1rem;
+        // background: $secondary;
+        // color: #fff;
+        // border-bottom: 1px solid $fourth;
     }
-}
+    &__icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 0.25rem;
+        // vertical-align: middle;
+        // display: inline-block;
+        // display: none;
+    }
+    &__title {
+        margin-bottom: 0;
+    }
 
+}
